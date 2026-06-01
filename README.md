@@ -61,6 +61,27 @@ graph TD
 * **High-Precision Chronometer Ticks**: Plots 72 micro-tick marks at 5-degree intervals around the outer boundary for a scientific, astrolabe-like instrument feel.
 * **Spiritual Emojis & Symbols**: Employs authentic unicode planetary glyphs (`☉`, `☽`, `☿`, `♀`, `♂`, `♃`, `♄`, `☊`, `☋`) and zodiac sign icons (`♈`, `♉`, `♊`, etc.) to provide instant visual quality.
 
+#### ✦ Planetary Aspects Guide
+| Aspect | Angle | Color in Chart | Traditional Meaning | Mapped Psychological Energy |
+| :--- | :---: | :---: | :--- | :--- |
+| **Trine** | 120° | 🟢 Emerald | Harmonious flow, innate talent | Natural strengths, effortless expression |
+| **Sextile** | 60° | 🔵 Sky Blue (Dashed) | Supportive opening, opportunity | Pathways for conscious growth and skill-building |
+| **Square** | 90° | 🔴 Rose Red | Dynamic tension, friction | Challenges requiring adaptation and internal work |
+| **Opposition** | 180° | 🟡 Amber | Polarized awareness, mirrors | Relationship dynamics, balancing opposing needs |
+
+#### ✦ Mapped Celestial Bodies
+| Planet | Glyph | Mapped Color | Astrological Domain | Psychological Core Reflection |
+| :--- | :---: | :---: | :--- | :--- |
+| **Sun** | ☉ | `#FBBF24` (Amber) | Ego, vitality, core path | Conscious identity, main focus |
+| **Moon** | ☽ | `#F8FAFC` (Slate) | Emotions, sub-conscious, instinct | Intuition, emotional needs, inner child |
+| **Mercury** | ☿ | `#38BDF8` (Sky) | Mind, communication, intellect | Processing style, speech, logic |
+| **Venus** | ♀ | `#F472B6` (Pink) | Love, harmony, values | Connection style, relationships, art |
+| **Mars** | ♂ | `#F87171` (Red) | Action, drive, assertiveness | Willpower, physical energy, courage |
+| **Jupiter** | ♃ | `#C084FC` (Purple) | Expansion, wisdom, luck | Faith, growth pathways, philosophy |
+| **Saturn** | ♄ | `#818CF8` (Indigo) | Structure, discipline, karma | Boundaries, lessons, responsibilities |
+| **Rahu** | ☊ | `#34D399` (Emerald) | North Node: future destiny | Obsessions, growth thresholds, future calling |
+| **Ketu** | ☋ | `#FB7185` (Rose) | South Node: past-life karma | Inherent talents, spiritual release, detachment |
+
 ### 💬 ChatGPT-Style Chat Workspace
 * **Animated Bouncing-Dots Indicator**: Displays three bouncing golden dots inside a glassmorphic chat bubble when the model is geocoding or computing degrees, assuring the user of progress.
 * **Pulsing Text Cursor**: Appends a soft terminal typing block (`▋`) to the end of the text while active streaming is occurring.

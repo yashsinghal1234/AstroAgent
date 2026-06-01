@@ -787,7 +787,7 @@ export default function App() {
               <h3 className="text-[10px] font-mono uppercase tracking-widest text-slate-400 border-b border-slate-800 pb-1.5 flex items-center gap-1.5 select-none">
                 <Compass className="h-3.5 w-3.5 text-amber-500" /> Celestial Coordinates
               </h3>
-              <div className="grid grid-cols-2 gap-2.5 max-h-[190px] overflow-y-auto pr-1">
+              <div className="grid grid-cols-2 gap-2.5 w-full">
                 {Object.entries(natalChart.planets).map(([name, p]) => {
                   const colors = {
                     Sun: "#FBBF24", Moon: "#F8FAFC", Mercury: "#38BDF8", Venus: "#F472B6", Mars: "#F87171", Jupiter: "#C084FC", Saturn: "#818CF8", Rahu: "#34D399", Ketu: "#FB7185"
@@ -798,21 +798,21 @@ export default function App() {
                   return (
                     <div 
                       key={name} 
-                      className="flex flex-col p-2.5 rounded-xl bg-white/[0.015] border border-amber-500/[0.03] hover:border-amber-500/15 hover:bg-white/[0.03] transition-all duration-300 shadow-sm relative group overflow-hidden"
+                      className="flex items-center justify-between p-2.5 rounded-xl bg-white/[0.015] border border-amber-500/[0.03] hover:border-amber-500/15 hover:bg-white/[0.03] transition-all duration-300 shadow-sm relative group overflow-hidden"
                     >
-                      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-amber-500/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      <div className="flex items-center justify-between">
-                        <span className="font-mono text-slate-400 text-[10px] uppercase tracking-wider">{name}</span>
-                        <span className="text-[11px] font-mono select-none" style={{ color: colors[name] || '#FFF' }}>
+                      <div className="absolute left-0 top-0 h-full w-[2px] bg-amber-500/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      
+                      <div className="flex flex-col min-w-0">
+                        <span className="font-mono text-slate-400 text-[9px] uppercase tracking-wider leading-none">{name}</span>
+                        <span className="text-[11.5px] font-serif font-bold text-slate-200 truncate mt-1 leading-none">{p.sign}</span>
+                        <span className="text-[8.5px] font-mono text-slate-500 mt-1 leading-none">{p.degrees}°{p.minutes}'</span>
+                      </div>
+                      
+                      <div className="flex flex-col items-end shrink-0 gap-1.5 ml-2">
+                        <span className="text-xs select-none leading-none" style={{ color: colors[name] || '#FFF' }}>
                           {symbols[name] || '✧'}
                         </span>
-                      </div>
-                      <div className="mt-1 text-xs font-serif font-semibold text-slate-100 truncate">
-                        {p.sign}
-                      </div>
-                      <div className="flex items-center justify-between mt-1 text-[9px] font-mono text-slate-500">
-                        <span>{p.degrees}°{p.minutes}'</span>
-                        <span className="bg-amber-500/10 text-amber-400 px-1.5 py-0.2 rounded font-bold">H{p.house}</span>
+                        <span className="bg-amber-500/10 text-amber-400 text-[8.5px] font-mono px-1 py-0.2 rounded font-bold leading-none">H{p.house}</span>
                       </div>
                     </div>
                   );
@@ -822,7 +822,7 @@ export default function App() {
           )}
 
           {/* SAFETY ADVISORY DISCLAIMER */}
-          <div className="w-full bg-gradient-to-br from-amber-500/[0.01] to-transparent border border-amber-500/15 rounded-xl p-4 flex gap-3 text-xs leading-relaxed text-slate-400 mt-auto relative overflow-hidden backdrop-blur-sm">
+          <div className="w-full bg-gradient-to-br from-amber-500/[0.01] to-transparent border border-amber-500/15 rounded-xl p-4 flex gap-3 text-xs leading-relaxed text-slate-400 mt-auto relative overflow-hidden backdrop-blur-sm shrink-0">
             <div className="absolute top-0 right-0 w-12 h-12 bg-amber-500/[0.015] rounded-full blur-xl pointer-events-none" />
             <ShieldAlert className="h-4.5 w-4.5 text-amber-500/70 shrink-0 mt-0.5 animate-pulse" />
             <div>
