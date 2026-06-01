@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef, useMemo } from "react";
 import { 
   Sparkles, Send, MapPin, Calendar, Clock, 
   HelpCircle, ShieldAlert, ArrowRight, RefreshCw,
-  Compass, Info, User, CheckCircle2, AlertCircle
+  Compass, Info, User, CheckCircle2, AlertCircle,
+  Trash2
 } from "lucide-react";
 
 // Determinsitic stars generator for celestial backdrop
@@ -691,24 +692,28 @@ export default function App() {
       </div>
 
       {/* HEADER */}
-      <header className="relative z-10 border-b border-amber-500/10 bg-slate-950/60 backdrop-blur-md px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="h-8 w-8 rounded-full bg-gradient-to-tr from-amber-600 to-amber-400 flex items-center justify-center text-slate-950 font-bold shadow-[0_0_15px_rgba(245,158,11,0.3)]">
+      <header className="relative z-10 border-b border-amber-500/10 bg-slate-950/60 backdrop-blur-md px-4 sm:px-6 py-3.5 flex items-center justify-between gap-4 select-none">
+        <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+          <div className="h-7 w-7 sm:h-8 sm:w-8 rounded-full bg-gradient-to-tr from-amber-600 to-amber-400 flex items-center justify-center text-slate-950 text-xs sm:text-sm font-bold shrink-0 shadow-[0_0_15px_rgba(245,158,11,0.3)]">
             ✧
           </div>
-          <div>
-            <h1 className="font-serif text-lg tracking-wider text-amber-100 flex items-center gap-2">
-              ARADHANA <span className="text-[10px] uppercase font-mono tracking-[0.25em] text-amber-500 bg-amber-500/10 px-2 py-0.5 rounded">ASTROAGENT</span>
+          <div className="min-w-0">
+            <h1 className="font-serif text-sm sm:text-lg tracking-wider text-amber-100 flex items-center gap-1.5 leading-none">
+              ARADHANA <span className="text-[8px] sm:text-[9.5px] uppercase font-mono tracking-[0.2em] text-amber-500 bg-amber-500/10 px-1.5 sm:px-2 py-0.5 rounded leading-none shrink-0">ASTROAGENT</span>
             </h1>
-            <p className="text-[10px] font-mono text-slate-500 tracking-[0.1em]">YOUR COGNITIVE SPIRITUAL COMPANION</p>
+            <p className="text-[8.5px] sm:text-[9.5px] font-mono text-slate-500 tracking-[0.08em] mt-1 hidden sm:block">YOUR COGNITIVE SPIRITUAL COMPANION</p>
           </div>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 shrink-0">
           <button 
+            type="button"
             onClick={handleClearHistory} 
-            className="text-[10px] font-mono tracking-widest text-slate-400 hover:text-red-400/80 transition-colors uppercase border border-slate-800 hover:border-red-950 px-3 py-1.5 rounded-md"
+            title="Clear Sky Map"
+            className="text-[9.5px] sm:text-[10px] font-mono tracking-wider sm:tracking-widest text-slate-400 hover:text-red-400/90 hover:bg-red-500/[0.03] transition-all uppercase border border-slate-800 hover:border-red-950/30 p-2 sm:px-3 sm:py-1.5 rounded-md flex items-center gap-1.5 group active:scale-[0.98]"
           >
-            Clear Sky Map
+            <Trash2 className="h-3.5 w-3.5 text-slate-500 group-hover:text-red-400/95 transition-colors" />
+            <span className="hidden md:inline">Clear Sky Map</span>
+            <span className="hidden sm:inline md:hidden">Clear Map</span>
           </button>
         </div>
       </header>
