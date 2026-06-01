@@ -57,6 +57,7 @@ graph TD
 * **Aspect Lines Grid**: Automatically calculates angular aspects between planets and draws delicate coordinate lines inside the inner wheel: harmonious **Trines** (120° in emerald-green), challenging **Squares** (90° in rose-red), tense **Oppositions** (180° in amber), and supportive **Sextiles** (60° in dashed sky-blue).
 * **Conjunction Anti-Collision Stacking**: Sorts planetary coordinates and stacks conjunct bodies (within 8°) radially into concentric lanes, preventing any overlaps or illegible labels.
 * **Central HUD Dashboard Dial**: Smoothly displays the planet's glyph (e.g. `♀`), name (`Venus`), zodiac coordinates (`Capricorn 12°34'`), and house placement directly inside the glassmorphic center on hovering over any planet dot.
+* **Interactive Coordinates Dashboard Cards**: Renders calculated planets in a beautiful 2-column grid of glassmorphic panels underneath the astrolabe. Hovering over a card reveals a glowing golden highlight border, displaying color-coded astronomical planet symbols (`☉`, `☽`, `☿`, `♀`, etc.), sign names in elegant editorial serifs, and exact degrees and house placements with golden badges.
 * **High-Precision Chronometer Ticks**: Plots 72 micro-tick marks at 5-degree intervals around the outer boundary for a scientific, astrolabe-like instrument feel.
 * **Spiritual Emojis & Symbols**: Employs authentic unicode planetary glyphs (`☉`, `☽`, `☿`, `♀`, `♂`, `♃`, `♄`, `☊`, `☋`) and zodiac sign icons (`♈`, `♉`, `♊`, etc.) to provide instant visual quality.
 

@@ -784,29 +784,50 @@ export default function App() {
           {/* PLANETARY COORDINATES DETAILS */}
           {natalChart && natalChart.planets && (
             <div className="w-full space-y-3">
-              <h3 className="text-[10px] font-mono uppercase tracking-widest text-slate-400 border-b border-slate-800 pb-1.5 flex items-center gap-1.5">
+              <h3 className="text-[10px] font-mono uppercase tracking-widest text-slate-400 border-b border-slate-800 pb-1.5 flex items-center gap-1.5 select-none">
                 <Compass className="h-3.5 w-3.5 text-amber-500" /> Celestial Coordinates
               </h3>
-              <div className="grid grid-cols-1 gap-2 max-h-[180px] overflow-y-auto pr-1 scrollbar-thin">
-                {Object.entries(natalChart.planets).map(([name, p]) => (
-                  <div key={name} className="flex items-center justify-between text-xs py-1.5 px-2.5 rounded bg-white/[0.015] border border-slate-900 hover:border-slate-800/80 hover:bg-white/[0.025] transition-colors">
-                    <span className="font-mono text-slate-300 font-bold">{name}</span>
-                    <div className="text-right">
-                      <span className="text-amber-200/90 font-medium">{p.formatted}</span>
-                      <span className="text-[10px] text-slate-500 font-mono block">House {p.house}</span>
+              <div className="grid grid-cols-2 gap-2.5 max-h-[190px] overflow-y-auto pr-1">
+                {Object.entries(natalChart.planets).map(([name, p]) => {
+                  const colors = {
+                    Sun: "#FBBF24", Moon: "#F8FAFC", Mercury: "#38BDF8", Venus: "#F472B6", Mars: "#F87171", Jupiter: "#C084FC", Saturn: "#818CF8", Rahu: "#34D399", Ketu: "#FB7185"
+                  };
+                  const symbols = {
+                    Sun: "☉", Moon: "☽", Mercury: "☿", Venus: "♀", Mars: "♂", Jupiter: "♃", Saturn: "♄", Rahu: "☊", Ketu: "☋"
+                  };
+                  return (
+                    <div 
+                      key={name} 
+                      className="flex flex-col p-2.5 rounded-xl bg-white/[0.015] border border-amber-500/[0.03] hover:border-amber-500/15 hover:bg-white/[0.03] transition-all duration-300 shadow-sm relative group overflow-hidden"
+                    >
+                      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-amber-500/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className="flex items-center justify-between">
+                        <span className="font-mono text-slate-400 text-[10px] uppercase tracking-wider">{name}</span>
+                        <span className="text-[11px] font-mono select-none" style={{ color: colors[name] || '#FFF' }}>
+                          {symbols[name] || '✧'}
+                        </span>
+                      </div>
+                      <div className="mt-1 text-xs font-serif font-semibold text-slate-100 truncate">
+                        {p.sign}
+                      </div>
+                      <div className="flex items-center justify-between mt-1 text-[9px] font-mono text-slate-500">
+                        <span>{p.degrees}°{p.minutes}'</span>
+                        <span className="bg-amber-500/10 text-amber-400 px-1.5 py-0.2 rounded font-bold">H{p.house}</span>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           )}
 
           {/* SAFETY ADVISORY DISCLAIMER */}
-          <div className="w-full bg-amber-500/[0.02] border border-amber-500/10 rounded-xl p-4 flex gap-3 text-xs leading-relaxed text-slate-400 mt-auto">
-            <ShieldAlert className="h-5 w-5 text-amber-500/60 shrink-0 mt-0.5" />
+          <div className="w-full bg-gradient-to-br from-amber-500/[0.01] to-transparent border border-amber-500/15 rounded-xl p-4 flex gap-3 text-xs leading-relaxed text-slate-400 mt-auto relative overflow-hidden backdrop-blur-sm">
+            <div className="absolute top-0 right-0 w-12 h-12 bg-amber-500/[0.015] rounded-full blur-xl pointer-events-none" />
+            <ShieldAlert className="h-4.5 w-4.5 text-amber-500/70 shrink-0 mt-0.5 animate-pulse" />
             <div>
-              <p className="font-serif text-slate-300 font-semibold mb-1">Celestial Reflection Advisory</p>
-              Astrology is a mirror for self-reflection and spiritual growth. Readings should never substitute certified medical advice, legal counsel, or financial decisions.
+              <p className="font-serif text-amber-300/90 font-semibold mb-1 tracking-wide">Celestial Reflection Advisory</p>
+              Astrology serves as a mirror for self-reflection and spiritual growth. Readings should never substitute certified medical advice, legal counsel, or financial decisions.
             </div>
           </div>
 
