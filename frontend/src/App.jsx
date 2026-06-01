@@ -448,7 +448,10 @@ export default function App() {
   const [streamingText, setStreamingText] = useState("");
   const [activeStep, setActiveStep] = useState(""); // Classification, Geocoding, Calculation, Interpretation
   const [isFormOpen, setIsFormOpen] = useState(true);
-  const [activeMobileTab, setActiveMobileTab] = useState("chat");
+  const [activeMobileTab, setActiveMobileTab] = useState(() => {
+    const saved = localStorage.getItem("astroagent_natal_chart");
+    return saved ? "chat" : "chart";
+  });
   
   const messagesEndRef = useRef(null);
 
@@ -664,6 +667,8 @@ export default function App() {
       setBirthDetails({ date: "", time: "", place: "" });
       setNatalChart(null);
       setLogs([]);
+      setActiveMobileTab("chart");
+      setIsFormOpen(true);
     }
   };
 
@@ -897,6 +902,31 @@ export default function App() {
                 </div>
               </div>
             ))}
+
+            {/* Premium Onboarding CTA Card if Chart is not cast yet */}
+            {!natalChart && (
+              <div className="max-w-md mx-auto p-6 rounded-2xl bg-gradient-to-br from-amber-500/[0.03] to-transparent border border-amber-500/10 backdrop-blur-sm shadow-xl text-center space-y-4 my-6 animate-fadeIn">
+                <div className="h-10 w-10 rounded-full bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mx-auto text-amber-400 text-lg select-none">
+                  🪐
+                </div>
+                <div className="space-y-1.5">
+                  <h4 className="font-serif text-sm font-semibold text-amber-100 tracking-wide">Cast Your Birth Map</h4>
+                  <p className="text-[11px] text-slate-400 leading-relaxed px-4">
+                    Aradhana requires your date, time, and city of birth to align with the stars and provide personalized guidance.
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setActiveMobileTab("chart");
+                    setIsFormOpen(true);
+                  }}
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-600 to-amber-500 text-slate-950 font-mono tracking-widest uppercase text-[10px] px-5 py-2.5 rounded-lg font-bold shadow-lg hover:shadow-amber-500/10 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                >
+                  Configure Birth Details 👉
+                </button>
+              </div>
+            )}
 
             {/* STEAMING TEXT / LOADER STATE */}
             {isStreaming && (
