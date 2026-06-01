@@ -1,0 +1,41 @@
+{
+  "planets": {
+    "Sun": "Represents the soul, ego, vitality, authority, and father. It dictates one's core identity and sense of purpose. In Aries, it is exalted (strong leadership); in Libra, it is debilitated (struggles with self-assertion).",
+    "Moon": "Represents the mind, emotions, maternal instincts, intuition, and peace of mind. It dictates how one responds emotionally to life. In Taurus, it is exalted (emotional stability); in Scorpio, it is debilitated (intense, turbulent emotions).",
+    "Mercury": "Represents intellect, communication, logic, analytical skills, commerce, and writing. In Virgo, it is exalted (extreme attention to detail); in Pisces, it is debilitated (more intuitive, less logical).",
+    "Venus": "Represents love, relationships, aesthetics, luxury, art, and harmony. It governs how we connect with others and seek pleasure. In Pisces, it is exalted (unconditional love); in Virgo, it is debilitated (overly critical in relationships).",
+    "Mars": "Represents energy, passion, action, courage, ambition, and aggression. It governs our drive and physical vitality. In Capricorn, it is exalted (controlled, structured energy); in Cancer, it is debilitated (passive-aggressive or emotional anger).",
+    "Jupiter": "Represents wisdom, philosophy, expansion, luck, spirituality, and higher learning. It is the great benefic. In Cancer, it is exalted (nourishing wisdom); in Capricorn, it is debilitated (struggles with optimism).",
+    "Saturn": "Represents discipline, structure, delay, karma, limitations, and hard work. It teaches perseverance through challenge. In Libra, it is exalted (balanced justice); in Aries, it is debilitated (impatience under restriction).",
+    "Rahu": "The North Node of the Moon. Represents worldly desires, ambition, obsession, innovation, and unconventional ideas. It creates a drive to achieve in the house it occupies, but can lead to illusion.",
+    "Ketu": "The South Node of the Moon. Represents spirituality, detachment, liberation (moksha), introspection, and past-life talents. It creates a feeling of separation or mastery in the house it occupies."
+  },
+  "houses": {
+    "1st": "The Ascendant (Lagna). Represents the physical body, self, personality, general health, life path, and first impressions.",
+    "2nd": "Represents accumulated wealth, family, speech, food habits, values, and facial features.",
+    "3rd": "Represents courage, younger siblings, short travels, communication, writing, manual skills, and self-effort.",
+    "4th": "Represents home, mother, emotional security, happiness, vehicles, real estate, and inner peace.",
+    "5th": "Represents creativity, intelligence, children, romance, ancient wisdom, speculative gains, and self-expression.",
+    "6th": "Represents daily routines, health, debts, obstacles, enemies, service, and overcoming challenges.",
+    "7th": "Represents spouse, marriage, business partnerships, legal agreements, and public relations.",
+    "8th": "Represents longevity, transformation, secrets, research, occult sciences, inheritance, and unexpected changes.",
+    "9th": "Represents luck, higher education, father, religion, spirituality, long-distance travel, and philosophy.",
+    "10th": "Represents career, reputation, public life, authority, achievements, and social status.",
+    "11th": "Represents gains, elder siblings, social networks, friendships, hopes, and fulfillment of desires.",
+    "12th": "Represents isolation, expenses, foreign travel, subconscious mind, spiritual liberation, sleep, and dreams."
+  },
+  "signs": {
+    "Aries": "Element: Fire. Ruler: Mars. Characteristics: Energetic, pioneering, assertive, courageous, impulsive.",
+    "Taurus": "Element: Earth. Ruler: Venus. Characteristics: Stable, practical, sensual, patient, stubborn.",
+    "Gemini": "Element: Air. Ruler: Mercury. Characteristics: Versatile, curious, intellectual, communicative, restless.",
+    "Cancer": "Element: Water. Ruler: Moon. Characteristics: Nurturing, emotional, intuitive, protective, moody.",
+    "Leo": "Element: Fire. Ruler: Sun. Characteristics: Creative, generous, proud, dramatic, warm-hearted.",
+    "Virgo": "Element: Earth. Ruler: Mercury. Characteristics: Analytical, meticulous, practical, helpful, critical.",
+    "Libra": "Element: Air. Ruler: Venus. Characteristics: Diplomatic, artistic, social, fair-minded, indecisive.",
+    "Scorpio": "Element: Water. Ruler: Mars/Pluto. Characteristics: Intense, passionate, secretive, powerful, transformational.",
+    "Sagittarius": "Element: Fire. Ruler: Jupiter. Characteristics: Optimistic, philosophical, adventurous, generous, impatient.",
+    "Capricorn": "Element: Earth. Ruler: Saturn. Characteristics: Disciplined, ambitious, practical, patient, reserved.",
+    "Aquarius": "Element: Air. Ruler: Saturn/Uranus. Characteristics: Humanitarian, innovative, independent, friendly, rebellious.",
+    "Pisces": "Element: Water. Ruler: Jupiter/Neptune. Characteristics: Compassionate, artistic, intuitive, spiritual, dreamy."
+  }
+}

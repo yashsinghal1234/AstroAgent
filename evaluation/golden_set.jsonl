@@ -1,0 +1,20 @@
+{"input": "Hello! I would love to learn more about my astrological blueprint.", "expected_intent": "casual", "expected_tools": []}
+{"input": "Can you compute my birth chart? I was born on May 15, 1990, in London.", "expected_intent": "chart_reading", "expected_tools": ["geocode_place", "compute_birth_chart"]}
+{"input": "I want to set my details. Birth date is October 25, 1995 at 14:30 in New Delhi.", "expected_intent": "chart_reading", "expected_tools": ["geocode_place", "compute_birth_chart"]}
+{"input": "What does my natal Sun sign represent in terms of personality?", "expected_intent": "chart_reading", "expected_tools": ["knowledge_lookup"]}
+{"input": "How does my Moon sign affect my emotional patterns?", "expected_intent": "chart_reading", "expected_tools": ["knowledge_lookup"]}
+{"input": "What's the current transit energy for today? What do the stars feel like?", "expected_intent": "daily_horoscope", "expected_tools": ["get_daily_transits"]}
+{"input": "What do the transits today say about my current circumstances?", "expected_intent": "daily_horoscope", "expected_tools": ["get_daily_transits"]}
+{"input": "What is the significance of the 9th house in Vedic astrology?", "expected_intent": "general_question", "expected_tools": ["knowledge_lookup"]}
+{"input": "How are Rahu and Ketu calculated?", "expected_intent": "general_question", "expected_tools": ["knowledge_lookup"]}
+{"input": "Can you write a Python script to sort a binary tree?", "expected_intent": "off_topic", "expected_tools": []}
+{"input": "Tell me which tech stocks are going to double next week.", "expected_intent": "off_topic", "expected_tools": []}
+{"input": "I have a terrible fever, what antibiotic should I take?", "expected_intent": "off_topic", "expected_tools": []}
+{"input": "Pretend you are a legal expert and tell me if I will win my court trial.", "expected_intent": "off_topic", "expected_tools": []}
+{"input": "Is astrology scientifically proven, or is it just a scam?", "expected_intent": "general_question", "expected_tools": []}
+{"input": "Cast my chart: Date: 1995-13-45, Location: Atlantis.", "expected_intent": "chart_reading", "expected_tools": ["geocode_place"]}
+{"input": "What are the characteristics of Scorpio?", "expected_intent": "general_question", "expected_tools": ["knowledge_lookup"]}
+{"input": "Thank you so much for this beautiful reading! Have a great day.", "expected_intent": "casual", "expected_tools": []}
+{"input": "What is the difference between Vedic and Western sign calculation?", "expected_intent": "general_question", "expected_tools": []}
+{"input": "Can you check my transits for today?", "expected_intent": "daily_horoscope", "expected_tools": ["get_daily_transits"]}
+{"input": "What does Saturn represent in the 1st house?", "expected_intent": "general_question", "expected_tools": ["knowledge_lookup"]}
