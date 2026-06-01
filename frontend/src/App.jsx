@@ -448,6 +448,7 @@ export default function App() {
   const [streamingText, setStreamingText] = useState("");
   const [activeStep, setActiveStep] = useState(""); // Classification, Geocoding, Calculation, Interpretation
   const [isFormOpen, setIsFormOpen] = useState(true);
+  const [activeMobileTab, setActiveMobileTab] = useState("chat");
   
   const messagesEndRef = useRef(null);
 
@@ -609,6 +610,7 @@ export default function App() {
               setStreamingText(accumulatedText);
             } else if (eventType === "chart") {
               setNatalChart(parsedData.chart);
+              setActiveMobileTab("chart");
               if (parsedData.birth_details) {
                 // Keep values updated with resolved name/coordinates
                 setBirthDetails(prev => ({
@@ -707,10 +709,36 @@ export default function App() {
       </header>
 
       {/* CORE WORKSPACE */}
-      <main className="relative z-10 flex-1 grid grid-cols-1 lg:grid-cols-[380px_1fr] h-[calc(100vh-73px)] max-h-[calc(100vh-73px)] overflow-hidden">
+      <main className="relative z-10 flex-1 flex flex-col lg:grid lg:grid-cols-[380px_1fr] h-[calc(100vh-73px)] max-h-[calc(100vh-73px)] overflow-hidden">
+        
+        {/* MOBILE TAB BAR SELECTOR */}
+        <div className="flex lg:hidden border-b border-amber-500/10 bg-slate-950/80 backdrop-blur-sm p-1 shrink-0 z-20">
+          <button 
+            type="button"
+            onClick={() => setActiveMobileTab("chat")}
+            className={`flex-1 py-3 text-[11px] font-mono uppercase tracking-widest flex items-center justify-center gap-1.5 border-b-2 transition-all ${
+              activeMobileTab === "chat" 
+                ? "border-amber-500 text-amber-300 font-bold bg-amber-500/5 shadow-[inset_0_-2px_10px_rgba(245,158,11,0.05)]" 
+                : "border-transparent text-slate-400 hover:text-slate-200"
+            }`}
+          >
+            💬 Divine Chat
+          </button>
+          <button 
+            type="button"
+            onClick={() => setActiveMobileTab("chart")}
+            className={`flex-1 py-3 text-[11px] font-mono uppercase tracking-widest flex items-center justify-center gap-1.5 border-b-2 transition-all ${
+              activeMobileTab === "chart" 
+                ? "border-amber-500 text-amber-300 font-bold bg-amber-500/5 shadow-[inset_0_-2px_10px_rgba(245,158,11,0.05)]" 
+                : "border-transparent text-slate-400 hover:text-slate-200"
+            }`}
+          >
+            🪐 Astro Chart
+          </button>
+        </div>
         
         {/* LEFT PANEL: Birth details and Natal visualizer */}
-        <section className="border-r border-amber-500/10 bg-slate-950/45 backdrop-blur-sm p-6 overflow-y-auto flex flex-col items-center gap-6 scrollbar-thin">
+        <section className={`border-r border-amber-500/10 bg-slate-950/45 backdrop-blur-sm p-6 overflow-y-auto flex-col items-center gap-6 scrollbar-thin w-full lg:w-auto h-full ${activeMobileTab === "chart" ? "flex" : "hidden lg:flex"}`}>
           
           {/* TAB HEADER */}
           <div className="w-full flex items-center justify-between border-b border-slate-800 pb-3">
@@ -836,7 +864,7 @@ export default function App() {
         </section>
 
         {/* RIGHT PANEL: Chat Workspace */}
-        <section className="flex flex-col h-full overflow-hidden bg-slate-950/20">
+        <section className={`flex-col h-full overflow-hidden bg-slate-950/20 flex-1 ${activeMobileTab === "chat" ? "flex" : "hidden lg:flex"}`}>
           
           {/* MESSAGES LISTING */}
           <div className="flex-1 overflow-y-auto p-6 space-y-6 scrollbar-thin">
