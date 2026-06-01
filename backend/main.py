@@ -37,10 +37,12 @@ class ChatPayload(BaseModel):
     messages: List[ChatMessage]
     birth_details: Optional[Dict[str, Any]] = None # date, time, place
 
+@app.get("/health")
 @app.get("/api/health")
 def health_check():
     return {"status": "ok", "time": datetime.now().isoformat()}
 
+@app.post("/chat")
 @app.post("/api/chat")
 async def chat_endpoint(payload: ChatPayload):
     # Parse incoming payload
