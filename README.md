@@ -138,3 +138,11 @@ python evaluation/run_eval.py
 1. **NASA-Grade Astrometry Offline**: The astronomical calculations engine utilizes the `de421.bsp` ephemeris binary. This allows complete offline calculation of high-precision planetary coordinates (Aries 0° to Pisces 360°) within seconds.
 2. **Whole-Sign House Division**: The project defaults to the traditional Whole-Sign house system—the foundation of Vedic and classical Western astrology—ensuring clean house segments.
 3. **Offline Geocoding Fallback**: Geocoding utilizes the OpenStreetMap Nominatim API, with timezones determined by latitude and longitude lookup via `timezonefinder` to accurately determine birth chart charts regardless of daylight saving rules.
+
+---
+
+## ✦ License & Copyright
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+Copyright (c) 2026 Yash Singhal.
