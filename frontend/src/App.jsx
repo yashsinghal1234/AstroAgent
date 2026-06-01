@@ -540,7 +540,9 @@ export default function App() {
 
   // --- Real-time POST Streaming Parser for FastAPI SSE endpoint ---
   const streamAgentResponse = async (chatHistory, details) => {
-    const apiHost = "http://localhost:8000"; // FastAPI port
+    const apiHost = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
+      ? "http://localhost:8000"
+      : ""; // Dynamic for local or live Vercel deployments
     
     const response = await fetch(`${apiHost}/api/chat`, {
       method: "POST",
